@@ -16,8 +16,12 @@ header {
   min-height: 100vh;
 }
 
+.header-content,
+main {
+  padding: 2rem 1.5rem;
+}
+
 .header-content {
-  padding: 2rem 1rem;
   position: relative;
   height: 100vh;
 }
@@ -42,17 +46,21 @@ header {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  width: calc(100% - 2rem);
+  width: calc(100% - 3rem);
   padding: 1.2rem;
   color: #fff;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 2.5rem;
   font-weight: 300;
   word-wrap: break-word;
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 a {
@@ -94,8 +102,41 @@ li {
   display: none;
 }
 
+.vr-section {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.vr-section img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.vr-section p {
+  color: hsl(0, 0%, 55%);
+  text-align: center;
+}
+
+.vr-section-texts {
+  width: 80%;
+}
+
 @media (min-width: 750px) {
-  .header-content {
+  .header-content,
+  main {
     padding: 2rem 5rem;
   }
 
@@ -106,15 +147,24 @@ li {
   h1 {
     font-size: 3rem;
   }
+
+  .desktop-img {
+    display: block;
+  }
+
+  .mobile-img {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
-  header {
-    background-image: url("./images/desktop/image-hero.jpg");
+  .header-content,
+  main {
+    padding: 4rem 10rem;
   }
 
-  .header-content {
-    padding: 4rem 10rem;
+  header {
+    background-image: url("./images/desktop/image-hero.jpg");
   }
 
   .menu-btn {
@@ -149,7 +199,46 @@ li {
     font-size: 4rem;
   }
 
+  h2 {
+    font-size: 3.5rem;
+  }
+
   br {
     display: none;
+  }
+
+  .vr-section {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .vr-section img {
+    height: 100%;
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  .vr-section-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    position: relative;
+    width: 50vw;
+    background-color: #fff;
+    left: -100px;
+    top: 100px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .vr-section p {
+    color: hsl(0, 0%, 55%);
+    text-align: left;
   }
 }
