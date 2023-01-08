@@ -331,8 +331,8 @@ footer {
   }
 
   .card {
-    height: 40vh;
-    max-height: 500px;
+    height: 50vh;
+    max-height: 600px;
   }
 
   .card p {
@@ -451,10 +451,6 @@ footer {
     font-size: 4rem;
   }
 
-  h2 {
-    font-size: 3.5rem;
-  }
-
   br {
     display: none;
   }
@@ -479,7 +475,7 @@ footer {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: left;
     margin-bottom: 1rem;
   }
