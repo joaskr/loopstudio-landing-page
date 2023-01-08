@@ -181,6 +181,75 @@ h2 {
   cursor: pointer;
 }
 
+.more-btn:hover {
+  background: hsl(0, 0%, 0%);
+  color: #fff;
+  transition: 1s ease;
+}
+
+footer {
+  background-color: hsl(0, 0%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.footer-column-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-column-one ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-column-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-column-two p {
+  color: hsl(0, 0%, 41%);
+  margin-bottom: 1rem;
+}
+
+.social-medias {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-logo {
+  height: 100%;
+}
+
+.footer-link::after {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 2px solid black;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.footer-link:hover::after {
+  border-bottom: 2px solid #fff;
+}
+
 #earth {
   background-image: url(./images/mobile/image-deep-earth.jpg);
 }
@@ -215,7 +284,8 @@ h2 {
 
 @media (min-width: 750px) {
   .header-content,
-  main {
+  main,
+  footer {
     padding: 2rem 5rem;
   }
 
@@ -254,7 +324,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem 1rem;
+    gap: 2rem 2rem;
     grid-template-areas:
       "earth arcade soccer grid"
       "above borealis curiosity fisheye";
@@ -274,6 +344,36 @@ h2 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-column-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-column-one ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   #earth {
@@ -395,16 +495,6 @@ h2 {
 
   .creations-section {
     margin-top: 7rem;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem 1rem;
-    grid-template-areas:
-      "earth arcade soccer grid"
-      "above borealis curiosity fisheye";
   }
 
   .card p {
